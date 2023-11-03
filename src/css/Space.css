@@ -1,0 +1,19 @@
+.board-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+}
+
+.space {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+}
+
+.black {
+  background-color: #000;
+}
+
+.white {
+  background-color: white;
+}

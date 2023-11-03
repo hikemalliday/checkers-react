@@ -1,0 +1,12 @@
+.home-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    ),
+    url(./src/assets/background2.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 93px;
+}

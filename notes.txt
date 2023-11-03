@@ -1,0 +1,46 @@
+BUGS:
+    -Our coordinates x and y seems flipped
+    -refactor Pieces.tsx.handleClick to set the moveStart with an event rather than 'coordinates'
+        -This may mean we do not have to pass down coordinates
+ACTION:
+    -We need to 'pull' the coordinate 'onDrop' somehow:
+        -The coordinates need to be baked into the className
+        -Save e.target.id from the 'onDrop' event into 'moveEnd'
+        -Check this key inside 'boardState' and then call 'isMoveValid' logic
+        -The 'moveStart' logic has been saved from 'mouseClickDown'.event.id
+        -Use the ID's from the <Space/>'s to check 'boardState'
+
+TODO:
+    -How to put spaces between letters in CSS
+    -Drag and drop logic:
+        -save starting logic on first click
+        -if piece.color !== player.color, move is invalid
+            -Some sort of way to avoid even processing logic? 
+                -Don't even save the coordintes, just return. When mouse is released, we are checking against a null value, which causes piece to return home
+                -
+
+    -Database:
+        -"""CREATE TABLE game IF NOT EXISTS (
+            game_id INTEGER AUTOINCREMENT PRIMARY KEY,
+            date TIMESTAMP,
+            winner INTEGER (0=Draw, 1=Red, 2=Blue)
+        )
+        -"""CREATE TABLE turns IF NOT EXISTS (
+            turn_id INTEGER PRIMARY KEY,
+            game_id INTEGER,
+            red_score INTEGER,
+            blue_score INTEGER,
+            turn_number INTEGER,
+            player INTEGER,
+            move_from_x INTEGER,
+            move_from_y INTEGER,
+            move_to_x INTEGER,
+            move_to_y INTEGER
+        )
+
+    -REPLAY:
+        -With replays, we dont have to check for logic
+            -If game_type='replay', ignore all movement logic.
+            -Infact, ignore all logic except for clearing a space due to jumping.
+        -With this stored data, first we store the 'piece_type' of 'move_from'. Then, we move that piece type to 'move_to'. If its a jump, remove the piece inbetween
+        
