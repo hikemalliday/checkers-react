@@ -1,5 +1,8 @@
 BUGS:
-    -Our coordinates x and y seems flipped
+    -Change board render logic for black spaces.
+    -Change logic for piece movement, for example:
+        -Moving a piece to space X always changes it to a certain color
+        -If move is valid, change moveStart coordinates to false
     -refactor Pieces.tsx.handleClick to set the moveStart with an event rather than 'coordinates'
         -This may mean we do not have to pass down coordinates
 ACTION:

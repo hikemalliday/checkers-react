@@ -9,13 +9,17 @@ interface SpaceType {
 interface Props {
   boardState: Record<string, SpaceType>;
   coordinates: string;
-  setMoveStart: (coordinates: string) => void;
+
+  // setMoveStart: (coordinates: string[]) => void;
 }
-export const Piece = ({ boardState, coordinates, setMoveStart }: Props) => {
-  const handleClick = (coordinates: string) => {
-    console.log(`Clicked on <Piece/>: ${coordinates}`);
-    setMoveStart(coordinates);
-  };
+export const Piece = ({ boardState, coordinates }: Props) => {
+  // const handleClick = (coordinates: string) => {
+  //   console.log(`Clicked on <Piece/>: ${coordinates}`);
+  //   console.log("Piece.tsx:", coordinates);
+  //   let coordinates_array = [coordinates[1], coordinates[3]];
+
+  //   // setMoveStart(coordinates_array);
+  // };
 
   const pieceClass = `piece-${boardState[coordinates].color}${
     boardState.king ? " king" : ""
@@ -23,7 +27,7 @@ export const Piece = ({ boardState, coordinates, setMoveStart }: Props) => {
   return (
     <div
       className={pieceClass}
-      onMouseDown={() => handleClick(coordinates)}
+      // onMouseDown={() => handleClick(coordinates)}
       draggable
     ></div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/Space.css";
 import Piece from "./Piece";
 
@@ -6,12 +6,42 @@ interface SpaceType {
   piece: boolean;
   color: string;
   king: boolean;
+  isMoveValid: (coordinates: string[]) => boolean;
 }
 
 interface Props {
   boardState: Record<string, SpaceType>;
   coordinates: string;
+  handleOnDrop: (e: React.DragEvent) => void;
+  handleOnDragOver: (e: React.DragEvent) => void;
+  handleClick: (e: React.MouseEvent) => void;
 }
+
+export const Space = ({
+  boardState,
+  coordinates,
+  handleOnDrop,
+  handleClick,
+  handleOnDragOver,
+}: Props) => {
+  return (
+    <>
+      <div
+        className={boardState[coordinates].piece ? "space black" : "space"}
+        id={coordinates}
+        onMouseDown={(e) => handleClick(e)}
+        onDragOver={(e) => handleOnDragOver(e)}
+        onDrop={(e) => handleOnDrop(e)}
+      >
+        {boardState[coordinates].piece && (
+          <Piece boardState={boardState} coordinates={coordinates} />
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Space;
 
 //
 // WATCH VIDS ON DRAG / DROP
@@ -52,49 +82,3 @@ interface Props {
 //     - Save 'moveStart' on mouse click. If player !== boardState[coordinates].color, do not save 'moveStart'
 //     -                                 If boardState[coordinates].piece == false, return
 //     - moveStart and moveEnd data is compared against 'boardState'
-
-export const Space = ({ boardState, coordinates }: Props) => {
-  const handleClick = (coordinates: string) => {
-    console.log(`Clicked on <Space/>: ${coordinates}`);
-  };
-
-  const handleOnDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-  };
-
-  const handleOnDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    const target = e.target as HTMLElement;
-    if (target && target.id) {
-      const targetId = target.id;
-      console.log("Dropped onto:", targetId);
-      setMoveEnd(target.id);
-
-      console.log("moveStart: ", moveStart);
-      console.log("moveEnd: ", moveEnd);
-    }
-  };
-  const [moveStart, setMoveStart] = useState("");
-  const [moveEnd, setMoveEnd] = useState("");
-  return (
-    <>
-      <div
-        className={boardState[coordinates].piece ? "space black" : "space"}
-        id={coordinates}
-        onMouseDown={() => handleClick(coordinates)}
-        onDragOver={(e) => handleOnDragOver(e)}
-        onDrop={(e) => handleOnDrop(e)}
-      >
-        {boardState[coordinates].piece && (
-          <Piece
-            boardState={boardState}
-            coordinates={coordinates}
-            setMoveStart={() => setMoveStart(coordinates)}
-          />
-        )}
-      </div>
-    </>
-  );
-};
-
-export default Space;
