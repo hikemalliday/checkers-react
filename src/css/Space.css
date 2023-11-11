@@ -1,4 +1,5 @@
 .board-container {
+  padding-top: 50px;
   display: flex;
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */

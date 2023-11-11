@@ -1,25 +1,25 @@
-.piece-black {
+.piece-Black {
   width: 50px;
   height: 50px;
   background-image: url(./src/assets/black_piece.JPG);
   background-size: cover;
   border-radius: 50%;
 }
-.piece-red {
+.piece-Red {
   width: 50px;
   height: 50px;
   background-image: url(./src/assets/red_piece.JPG);
   background-size: cover;
   border-radius: 50%;
 }
-.piece-black-king {
+.piece-Black-king {
   width: 50px;
   height: 50px;
   background-image: url(./src/assets/black_king.JPG);
   background-size: cover;
   border-radius: 50%;
 }
-.piece-red-king {
+.piece-Red-king {
   width: 50px;
   height: 50px;
   background-image: url(./src/assets/red_king.JPG);

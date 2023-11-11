@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "../css/Space.css";
 import Piece from "./Piece";
 
 interface SpaceType {
@@ -12,28 +11,22 @@ type BoardState = {
 };
 
 interface Props {
-  boardState: Record<string, SpaceType | null>;
+  boardState: BoardState;
   coordinates: string;
-  spaceColor: string;
-  handleOnDrop: (e: React.DragEvent) => void;
-  handleOnDragOver: (e: React.DragEvent) => void;
-  handleClick: (e: React.MouseEvent) => void;
   setBoardState: React.Dispatch<React.SetStateAction<BoardState>>;
+  spaceColor: string;
 }
 
-export const Space = ({
-  spaceColor,
+export const ReplaySpace = ({
   boardState,
   coordinates,
-  handleOnDrop,
-  handleClick,
-  handleOnDragOver,
   setBoardState,
+  spaceColor,
 }: Props) => {
   useEffect(() => {
+    console.log("Space.tsx, debug for king conversion");
     // Check if the conditions are met
-
-    const updatedBoardState = { ...boardState };
+    const updatedBoardState: BoardState = { ...boardState };
     const space = boardState[coordinates];
     const updatedSpace = updatedBoardState[coordinates];
     if (
@@ -42,7 +35,7 @@ export const Space = ({
       space.color === "Red" &&
       space.king === false
     ) {
-      // Set king to true
+      // Update the boardState to set king to true
       if (updatedSpace) {
         updatedSpace.king = true;
         setBoardState(updatedBoardState);
@@ -54,22 +47,18 @@ export const Space = ({
       space.color === "Black" &&
       space.king === false
     ) {
-      // Set king to true
+      // Update the boardState to set king to true
       if (updatedSpace) {
         updatedSpace.king = true;
         setBoardState(updatedBoardState);
       }
     }
   }, [coordinates, boardState]);
-
   return (
     <>
       <div
         className={spaceColor == "black" ? "space black" : "space"}
         id={coordinates}
-        onMouseDown={(e) => handleClick(e)}
-        onDragOver={(e) => handleOnDragOver(e)}
-        onDrop={(e) => handleOnDrop(e)}
       >
         {boardState[coordinates] && (
           <Piece boardState={boardState} coordinates={coordinates} />
@@ -79,4 +68,4 @@ export const Space = ({
   );
 };
 
-export default Space;
+export default ReplaySpace;

@@ -1,4 +1,37 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .game-header-container {
   display: flex;
   justify-content: space-between;
+}
+
+.turndId-invalidmove-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.turnId-container {
+  padding-top: 5px;
+  font-weight: 550;
+}
+
+.invalid-move-container {
+  margin-top: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Add a smooth transition for the opacity property */
+  margin-top: 10px;
+}
+
+.invalid-move-container.show {
+  visibility: visible; /* Show the container when the 'show' class is present */
+  opacity: 1;
+  animation: blink 1.5s infinite;
 }

@@ -1,7 +1,15 @@
-.black-player {
+.Black-player {
   color: black;
 }
 
-.red-player {
+.Red-player {
   color: red;
+}
+
+.player-container {
+  margin-left: 51px;
+}
+
+.player-label {
+  font-weight: bold;
 }

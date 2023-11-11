@@ -1,9 +1,11 @@
-import { useState } from "react";
 import "../css/Score.css";
 
-export const Score = () => {
-  const [blackScore, setBlackScore] = useState(0);
-  const [redScore, setRedScore] = useState(0);
+interface Props {
+  redScore: number;
+  blackScore: number;
+}
+
+export const Score = ({ redScore, blackScore }: Props) => {
   return (
     <>
       <div className="score-container">

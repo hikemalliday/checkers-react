@@ -3,3 +3,16 @@
 
 .button:active {
 }
+
+.hyperlink {
+  cursor: default;
+}
+
+.hyperlink:hover {
+  color: #4343fb;
+  cursor: pointer;
+}
+
+.hyperlink:active {
+  color: #93c5fd;
+}
