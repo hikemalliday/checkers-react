@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/Buttons.css";
 
 export const ReplaysButton = () => {

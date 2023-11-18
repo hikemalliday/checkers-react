@@ -18,12 +18,18 @@ interface Props {
 export const ExportReplay = ({ exportReplayfunc, gameTurns }: Props) => {
   // return <div onClick={() => exportReplay(gameTurns)}>Export test Replay</div>;
   return (
-    <div
-      className="export-replay hyperlink"
+    <button
       onClick={() => exportReplayfunc(gameTurns)}
+      className="button-custom"
     >
       Export Replay
-    </div>
+    </button>
+    // <div
+    //   className="export-replay hyperlink"
+    //   onClick={() => exportReplayfunc(gameTurns)}
+    // >
+    //   Export Replay
+    // </div>
   );
 };
 

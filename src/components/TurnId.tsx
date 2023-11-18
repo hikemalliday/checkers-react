@@ -3,7 +3,7 @@ interface Props {
 }
 
 export const TurnId = ({ turnId }: Props) => {
-  return <div>TurnId: {turnId} </div>;
+  return <div>Turn #: {turnId} </div>;
 };
 
 export default TurnId;

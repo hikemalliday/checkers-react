@@ -1,0 +1,10 @@
+-INSIDE PACKAGE.JSON:
+    -We changed 'type' from 'module' to 'commonjs'
+
+-TESTING NOTES:
+    -We may need to jest.mock() things, because boardState and setBoardState are at the root
+    -So, at Board.tsx level, we could:
+        -jest.mock(boardState);
+        -jest.mock(setBoardState);
+        -Will likely need to mock all the game attributes at this level
+    -Can we test moving a piece?

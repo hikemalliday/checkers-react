@@ -6,32 +6,34 @@ body {
   height: 100vh;
 }
 
-.game-header-container {
+.score-player-export {
   display: flex;
   justify-content: space-between;
 }
 
 .turndId-invalidmove-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .turnId-container {
   padding-top: 5px;
   font-weight: 550;
+  align-self: flex-end;
 }
 
 .invalid-move-container {
   margin-top: 10px;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease; /* Add a smooth transition for the opacity property */
+  transition: opacity 0.5s ease;
   margin-top: 10px;
+  margin-right: 194px;
 }
 
 .invalid-move-container.show {
-  visibility: visible; /* Show the container when the 'show' class is present */
+  visibility: visible;
   opacity: 1;
   animation: blink 1.5s infinite;
 }

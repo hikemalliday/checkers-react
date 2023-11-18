@@ -1,12 +1,42 @@
-.home-container {
-  background-image: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    ),
-    url(./src/assets/background2.JPG);
-  background-size: cover;
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+
+.first-section {
+  margin-top: 1000px;
+  color: white;
+}
+
+.blueish {
+  background: #002233;
+  z-index: -1;
+}
+
+.greenish {
+  background: #9fd3c7;
+}
+
+.greyish {
+  background: #cccccc;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-top: 93px;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("../assets/waves.svg");
+}
+
+.layer2 {
+  background-image: url("../assets/waves2.svg");
 }

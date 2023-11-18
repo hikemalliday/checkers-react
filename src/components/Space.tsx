@@ -67,6 +67,7 @@ export const Space = ({
       <div
         className={spaceColor == "black" ? "space black" : "space"}
         id={coordinates}
+        data-testid={coordinates}
         onMouseDown={(e) => handleClick(e)}
         onDragOver={(e) => handleOnDragOver(e)}
         onDrop={(e) => handleOnDrop(e)}

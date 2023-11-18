@@ -32,13 +32,11 @@ function App() {
   const [boardState, setBoardState] = useState<BoardState>({});
 
   const exportReplayfunc = async (replay: GameTurn[]) => {
-    console.log("test exportReplay()");
-    console.log(replay);
     const url = "http://127.0.0.1:8000/export_replay";
     const timestampUnix = timestamp.getTime();
     const date = new Date(timestampUnix);
     const formattedDate = date.toLocaleString();
-    console.log(formattedDate);
+
     const body = {
       data: [] as GameTurn[],
       winner: null,
@@ -46,10 +44,9 @@ function App() {
     };
 
     body.data = replay;
-    console.log(body);
-    console.log("test export replay");
+
     try {
-      const results = await axios.post(url, body);
+      await axios.post(url, body);
     } catch (err) {
       console.log(err);
     }

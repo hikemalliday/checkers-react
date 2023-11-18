@@ -20,6 +20,7 @@ interface SpaceType {
 type BoardState = {
   [key: string]: SpaceType | null;
 };
+
 interface Props {
   boardState: BoardState;
   exportReplayfunc: (replay: GameTurn[]) => void;
@@ -60,7 +61,6 @@ export const NewGame = ({
       move_end: moveEndString,
     };
 
-    console.log(turn);
     const updatedGameTurns = [...gameTurns, turn];
 
     setGameTurns(updatedGameTurns);

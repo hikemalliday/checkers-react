@@ -13,18 +13,12 @@ export const Navbar = () => {
         </Link>
       </div>
       <div className="buttons-container">
-        <ul>
-          <li>
-            <Link className="nav-link" to="/new_game">
-              <NewGameButton />
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/replay">
-              <ReplaysButton />
-            </Link>
-          </li>
-        </ul>
+        <Link className="nav-link" to="/new_game">
+          <NewGameButton />
+        </Link>
+        <Link className="nav-link" to="/replay">
+          <ReplaysButton />
+        </Link>
       </div>
     </nav>
   );

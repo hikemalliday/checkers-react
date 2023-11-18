@@ -132,8 +132,7 @@ export const Board = ({
         }
       }
     }
-    console.log("moveStart", moveStart);
-    console.log("moveEnd", moveEnd);
+    console.log("end of Board.tsx.useEffect()");
   }, [moveEnd]);
 
   const isMoveValid = (moveStart: string[], moveEnd: string[]) => {
@@ -210,7 +209,6 @@ export const Board = ({
 
       updatedBoardState[keyMoveStart] = null;
       setBoardState(updatedBoardState);
-      // setMoveStart(moveEnd);
     } else {
       console.log("isMoveValidKing movement logic");
 
@@ -561,6 +559,7 @@ export const Board = ({
     const targetIdArray = [...targetId[1], targetId[3]];
     setMoveStart(targetIdArray);
     moveStartRef.current = targetIdArray;
+    console.log("moveStart array, handleClick:");
     console.log("moveStartRef", moveStartRef.current);
   };
 
@@ -576,6 +575,7 @@ export const Board = ({
       const targetIdArray = [...targetId[1], targetId[3]];
       setMoveEnd(targetIdArray);
       moveEndRef.current = targetIdArray;
+      console.log("moveEnd Array, handleOnDrop:");
       console.log("moveEndRef", moveEndRef.current);
     }
   };

@@ -34,26 +34,27 @@ export const GameHeader = ({
 }: Props) => {
   return (
     <>
-      {invalidMove}
       <div className="game-header-container">
-        <Score redScore={redScore} blackScore={blackScore} />
-        <Player activePlayer={activePlayer} />
-        <ExportReplay
-          exportReplayfunc={exportReplayfunc}
-          gameTurns={gameTurns}
-        />
-      </div>
-      <div className="turndId-invalidmove-container">
-        <div className="turnId-container">
-          <TurnId turnId={turnId} />
+        <div className="score-player-export">
+          <Score redScore={redScore} blackScore={blackScore} />
+          <Player activePlayer={activePlayer} />
+          <ExportReplay
+            exportReplayfunc={exportReplayfunc}
+            gameTurns={gameTurns}
+          />
         </div>
-        {
-          <div
-            className={`invalid-move-container ${invalidMove ? "show" : ""}`}
-          >
-            <InvalidMove />
+        <div className="turndId-invalidmove-container">
+          <div className="turnId-container">
+            <TurnId turnId={turnId} />
           </div>
-        }
+          {
+            <div
+              className={`invalid-move-container ${invalidMove ? "show" : ""}`}
+            >
+              <InvalidMove />
+            </div>
+          }
+        </div>
       </div>
     </>
   );

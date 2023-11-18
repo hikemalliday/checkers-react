@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import ReplayBoard from "../components/ReplayBoard";
 import ReplayHeader from "../components/ReplayHeader";
-import "../css/Replay.css";
 
 interface SpaceType {
   color: string | null | undefined;

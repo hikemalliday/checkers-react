@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/ReplayBoard.css";
 import ReplaySpace from "./ReplaySpace";
 
 interface SpaceType {
@@ -43,7 +42,7 @@ export const ReplayBoard = ({
   const navigate = useNavigate(); // Use the useNavigate hook to get the navigation function
   const playReplay = (replay: any[]) => {
     let index = 0;
-    let timeoutId = 0;
+    let timeoutId: NodeJS.Timeout;
     const playTurn = () => {
       if (isReplaying.current && index < replay.length) {
         const turnId = replay[index][0];

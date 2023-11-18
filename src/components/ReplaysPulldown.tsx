@@ -45,7 +45,7 @@ export const ReplaysPulldown = ({
       <div className="replays-pulldown-container">
         <div>
           <select value={selectedGameId} onChange={handleOptionChange}>
-            <option value="">Select Replay:</option>
+            <option className="pulldown">Select Replay:</option>
 
             {gameIds.map((option) => (
               <option key={option[0]} value={option[0]}>
@@ -55,20 +55,22 @@ export const ReplaysPulldown = ({
           </select>
           <div>
             <button
+              className="button-custom"
               onClick={() => {
                 selectReplay();
               }}
             >
-              SelectReplayButton
+              Play Replay
             </button>
           </div>
           <div>
             <button
+              className="button-custom"
               onClick={() => {
                 deleteReplay();
               }}
             >
-              DeleteReplayButton
+              Delete Replay
             </button>
           </div>
         </div>
