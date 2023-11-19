@@ -14,7 +14,7 @@ section {
 
 .blueish {
   background: #002233;
-  z-index: -1;
+  color: white;
 }
 
 .greenish {
@@ -23,6 +23,7 @@ section {
 
 .greyish {
   background: #cccccc;
+  background-image: url("../assets/waves2.svg");
 }
 
 .spacer {

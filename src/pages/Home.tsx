@@ -40,7 +40,7 @@ export const Home = () => {
             </p>
           </section>
         </div>
-        <div className="spacer layer2">
+        <div className="blueish">
           <section>
             <h1> Replays </h1>
             <p>
