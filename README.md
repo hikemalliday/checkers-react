@@ -15,3 +15,5 @@ The user can select  a replay from the pullldown menu. They can then click the P
 
 #### DEV NOTES:
 My second project created with ReactJS, as well as my second project created with Typescript. The replay feature plays the game from an array of objects. Each object represents a game turn, and contains the movement start and movement end coordinates. Its from these coordinates that we 'recreate' the piece movements.
+
+Learned a fair amount about state management with this project. Specifically, the async nature of 'useState()', and the sync nature of 'useRef()'.
