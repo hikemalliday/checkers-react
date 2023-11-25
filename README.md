@@ -6,7 +6,7 @@ Contains a breif description about the New Game and Replay pages.
 ![image](https://github.com/hikemalliday/checkers-react/assets/117792777/dd444abf-5927-47b0-9394-48a64143df6a)
 
 #### New Game page:
-The user can play a game against themself. The pieces are moved with drag and drop. When finished, they can click the export replay button. This uploads the replay to a SQLite database, stored on the [backend(https://github.com/hikemalliday/checkers-react-BACKEND).
+The user can play a game against themself. The pieces are moved with drag and drop. When finished, they can click the export replay button. This uploads the replay to a SQLite database, stored on the [backend](https://github.com/hikemalliday/checkers-react-BACKEND).
 ![image](https://github.com/hikemalliday/checkers-react/assets/117792777/6811f631-d8a8-4a75-aa3c-b7aaa1b94ad5)
 
 #### Replay page:
