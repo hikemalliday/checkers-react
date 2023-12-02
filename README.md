@@ -1,7 +1,7 @@
 # Checkers-React
 #### A Checkers game, built with ReactJS and Typescript
 
-##### Docker Hub:
+###### Docker Hub:
 
 https://hub.docker.com/repository/docker/hikemalliday/checkers-react-frontend/general
 
