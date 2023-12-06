@@ -2,7 +2,7 @@
   "name": "checkers-react",
   "private": true,
   "version": "0.0.0",
-  "type": "",
+  "type": "module",
   "presets": [
     "@babel/preset-env",
     "@babel/preset-react"

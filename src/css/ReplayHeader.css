@@ -1,6 +1,7 @@
 .replay-header-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 75px;
 }
 
 .turnId-container {

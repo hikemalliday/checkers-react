@@ -1,34 +1,7 @@
-line 379
+-Fixed placement of invalid move
+-Fix red and black score tallys on replay (they are swapped)
 
--Need to re render after refreshing boardState-
--DELETE seems to be bugging out the refresh somehow?
-TODO:
-   -Add parameter typing to 'setBoardState'
--JUMPS:
-  -BLACK:
-    -black down left
-  -RED UP RIGHT:
-    -Somehow the jump + the movement rendered at the same time
-    -Test all jumps, seems like the jump rendered before the previous move
-  DOWN RIGHT jumps not erasing the jumped piece, and kings not showing up when reaching board end, and kings not upgrading on jumps?
-  -CHECK DOWN RIGHT LOGIC
-
--Need to fetch GAMEIDS on page Replay
-
--GAMEID 12:
-  -black: y3x7 y4x6
-  -red: y6x6 y5x7
-  -black: y3x1 y4x2
-
--Need to re-render the replayBoard on.... boardState change
-
-
--NEED TO ADD THESE PROPERTIES TO REPLAY.TSX:
-    -redScore
-    -blackScore
-    -activePlayer
-    -turnId
-
+DELETE ALL OF THIS?:
 -REPLAY STATE MANAGEMENT:
     -App.tsx:
         -fetchReplay(game_id: number)

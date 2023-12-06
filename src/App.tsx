@@ -32,7 +32,7 @@ function App() {
   const [boardState, setBoardState] = useState<BoardState>({});
 
   const exportReplayfunc = async (replay: GameTurn[]) => {
-    const url = "http://127.0.0.1:8000/export_replay";
+    const url = "http://178.18.255.168:8000/export_replay";
     const timestampUnix = timestamp.getTime();
     const date = new Date(timestampUnix);
     const formattedDate = date.toLocaleString();
@@ -53,7 +53,7 @@ function App() {
   };
 
   const fetchGameIds = async () => {
-    const url = "http://127.0.0.1:8000/fetch_game_ids";
+    const url = "http://178.18.255.168:8000/fetch_game_ids";
     console.log("test fetch game ids2");
     try {
       const results = await axios.get(url);
@@ -65,7 +65,7 @@ function App() {
   };
   // Could possible refactor this to RETURN the results, then pass 'fetchReplay' inside setSelectedReplay
   const fetchReplay = async (gameId: number) => {
-    const url = "http://127.0.0.1:8000/fetch_replays";
+    const url = "http://178.18.255.168:8000/fetch_replays";
     if (!gameId) gameId = 0;
     try {
       const body = { game_id: gameId };
@@ -79,7 +79,7 @@ function App() {
   };
 
   const deleteGame = async (gameId: number) => {
-    const url = "http://127.0.0.1:8000/delete_game";
+    const url = "http://178.18.255.168:8000/delete_game";
     try {
       const body = { game_id: gameId };
       const results = await axios.post(url, body);
