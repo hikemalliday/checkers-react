@@ -18,7 +18,6 @@ DELETE ALL OF THIS?:
     -TURN ID
 
 
-
 -We must create another propertie 'WINNER' if we reach a winner state
 
 -REPLAYS PULLDONW:
@@ -111,26 +110,26 @@ export const NewGame = () => {
   };
 
   const pushGameTurn = () => {
-    // ... your existing logic to update gameTurns
+    
   };
 
   // Define other helper functions for game logic here
 
   const handleClick = (e: React.MouseEvent) => {
-    // ... your existing logic to handle click events
+    
   };
 
   const handleOnDragOver = (e: React.DragEvent) => {
-    // ... your existing logic to handle drag-over events
+    
   };
 
   const handleOnDrop = (e: React.DragEvent) => {
-    // ... your existing logic to handle drop events
+   
   };
 
   return (
     <>
-      {/* Render your game board and components based on game state */}
+      
     </>
   );
 };
