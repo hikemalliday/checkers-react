@@ -18,7 +18,9 @@ The user can select  a replay from the pullldown menu. They can then click the P
 ![image](https://cdn.discordapp.com/attachments/617825237752479751/1177755506832576533/image.png?ex=6573a94a&is=6561344a&hm=1f8b00c24b7ebc3779e30dcaadaf581fb514f3d222c4716863c39300962696ef&)
 
 #### DEV NOTES:
-My second project created with ReactJS, as well as my second project created with Typescript. The replay feature plays the game from an array of objects. Each object represents a game turn, and contains the movement start and movement end coordinates. Its from these coordinates that we 'recreate' the piece movements.
+My second project created with ReactJS, as well as my second project created with Typescript. TypeScript certainly did not solve any problems for me, I merely forced myself to build with it to expose myself to it. 
+
+The replay feature plays the game from an array of objects. Each object represents a game turn, and contains the movement start and movement end coordinates. Its from these coordinates that we 'recreate' the piece movements.
 
 I learned a fair amount about state management with this project.
 
