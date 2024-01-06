@@ -6,7 +6,7 @@ I have added a 'docker-compose' folder, which contains a docker-compose.yaml. Ru
 
 ###### Docker Hub:
 
-https://hub.docker.com/repository/docker/hikemalliday/checkers-react-frontend/general
+https://hub.docker.com/r/hikemalliday/checkers-react-frontend
 
 ##### Landing/home page:
 Contains a breif description about the New Game and Replay pages.
