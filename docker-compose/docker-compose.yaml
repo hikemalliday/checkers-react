@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: docker.io/hikemalliday/checkers-react-frontend:dockerhub
+    ports:
+      - "5173:3000" # Map the port 80 of the container to port 80 on the host
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: docker.io/hikemalliday/checkers-react-backend:dockerhub
+    ports:
+      - "8000:8000" # Map the port 5000 of the container to port 5000 on the host
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
