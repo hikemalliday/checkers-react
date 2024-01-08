@@ -20,6 +20,10 @@ The user can play a game against themself. The pieces are moved with drag and dr
 The user can select  a replay from the pullldown menu. They can then click the Play Replay button to watch the game.
 ![image](https://cdn.discordapp.com/attachments/617825237752479751/1177755506832576533/image.png?ex=6573a94a&is=6561344a&hm=1f8b00c24b7ebc3779e30dcaadaf581fb514f3d222c4716863c39300962696ef&)
 
+### Go ahead and try it!
+
+Play a game against youself under the New Game page, then click the export replay button. Then, go to the Replays page. Your gmae will be the highest numbered ID in the drop down list. Run the replay!
+
 #### DEV NOTES:
 My second project created with ReactJS, as well as my second project created with Typescript. TypeScript certainly did not solve any problems for me, I merely forced myself to build with it to expose myself to it. 
 
