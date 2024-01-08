@@ -1,9 +1,12 @@
 # Checkers-React
 #### A Checkers game, built with ReactJS and Typescript
 
+### Local Installation:
+I have added a 'docker-compose' folder, which contains a docker-compose.yaml. Run this YAML to pull both the backend and frontend images from Docker Hub and launch the website locally.
+
 ###### Docker Hub:
 
-https://hub.docker.com/repository/docker/hikemalliday/checkers-react-frontend/general
+https://hub.docker.com/r/hikemalliday/checkers-react-frontend
 
 ##### Landing/home page:
 Contains a breif description about the New Game and Replay pages.
