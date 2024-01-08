@@ -4,16 +4,17 @@ services:
   frontend:
     image: docker.io/hikemalliday/checkers-react-frontend:dockerhub
     ports:
-      - "5173:3000" # Map the port 80 of the container to port 80 on the host
+      - "5173:3000"
     depends_on:
       - backend
     networks:
       - app-network
-
+    environment:
+      - VITE_APP_HOST_NAME=${VITE_APP_HOST_NAME:-LOCAL}
   backend:
     image: docker.io/hikemalliday/checkers-react-backend:dockerhub
     ports:
-      - "8000:8000" # Map the port 5000 of the container to port 5000 on the host
+      - "8000:8000"
     networks:
       - app-network
 

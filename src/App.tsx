@@ -6,6 +6,12 @@ import NewGame from "./pages/NewGame";
 import Replay from "./pages/Replay";
 import axios from "axios";
 import "./App.css";
+import config from "../config.js";
+
+let apiUrl = import.meta.env.VITE_APP_SERVER_URL;
+
+if (import.meta.env.VITE_APP_HOST_NAME === "LOCAL")
+  apiUrl = import.meta.env.VITE_APP_LOCAL_URL;
 
 interface GameTurn {
   turn_id: number;
@@ -32,7 +38,7 @@ function App() {
   const [boardState, setBoardState] = useState<BoardState>({});
 
   const exportReplayfunc = async (replay: GameTurn[]) => {
-    const url = "http://178.18.255.168:8000/export_replay";
+    const url = `${apiUrl}export_replay`;
     const timestampUnix = timestamp.getTime();
     const date = new Date(timestampUnix);
     const formattedDate = date.toLocaleString();
@@ -53,8 +59,8 @@ function App() {
   };
 
   const fetchGameIds = async () => {
-    const url = "http://178.18.255.168:8000/fetch_game_ids";
-    console.log("test fetch game ids2");
+    const url = `${apiUrl}fetch_game_ids`;
+    console.log("test fetch game ids2", apiUrl);
     try {
       const results = await axios.get(url);
       console.log(results.data);
@@ -65,7 +71,7 @@ function App() {
   };
   // Could possible refactor this to RETURN the results, then pass 'fetchReplay' inside setSelectedReplay
   const fetchReplay = async (gameId: number) => {
-    const url = "http://178.18.255.168:8000/fetch_replays";
+    const url = `${apiUrl}fetch_replays`;
     if (!gameId) gameId = 0;
     try {
       const body = { game_id: gameId };
@@ -79,7 +85,7 @@ function App() {
   };
 
   const deleteGame = async (gameId: number) => {
-    const url = "http://178.18.255.168:8000/delete_game";
+    const url = `${apiUrl}delete_game`;
     try {
       const body = { game_id: gameId };
       const results = await axios.post(url, body);
