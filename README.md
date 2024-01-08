@@ -22,7 +22,7 @@ The user can select  a replay from the pullldown menu. They can then click the P
 
 ### Go ahead and try it!
 
-Play a game against youself under the New Game page, then click the export replay button. Then, go to the Replays page. Your gmae will be the highest numbered ID in the drop down list. Run the replay!
+Play a game against youself under the New Game page, then click the export replay button. Then, go to the Replays page. Your game will be the highest numbered ID in the drop down list. Run the replay!
 
 #### DEV NOTES:
 My second project created with ReactJS, as well as my second project created with Typescript. TypeScript certainly did not solve any problems for me, I merely forced myself to build with it to expose myself to it. 
